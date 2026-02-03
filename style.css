@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   height: 100vh;
@@ -6,31 +10,55 @@ body {
   justify-content: center;
   align-items: center;
   font-family: Arial, sans-serif;
+  padding: 20px;
 }
 
 .container {
-  background: white;
-  padding: 30px;
-  border-radius: 20px;
   text-align: center;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  background: white;
+  padding: 28px 22px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+  width: min(520px, 92vw);
 }
 
-h1 {
+.sticker {
+  width: 140px;        /* حجم ستكر بوبو ودودو */
+  height: auto;
+  display: block;
+  margin: 0 auto 10px;
+}
+
+.intro {
+  margin: 8px 0 14px;
+  font-size: 18px;
+  font-weight: 700;
   color: #ff4d6d;
 }
 
+.question {
+  margin: 0 0 18px;
+  color: #ff4d6d;
+  font-size: 24px;
+}
+
 .buttons {
-  margin-top: 20px;
+  margin-top: 10px;
   position: relative;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
 }
 
 button {
-  padding: 15px 30px;
+  padding: 14px 26px;
   font-size: 18px;
-  border-radius: 10px;
   border: none;
+  border-radius: 12px;
   cursor: pointer;
+  transition: transform 0.1s ease;
 }
 
 #yes {
@@ -38,8 +66,12 @@ button {
   color: white;
 }
 
+#yes:active {
+  transform: scale(0.98);
+}
+
 #no {
-  background: #ccc;
-  margin-left: 20px;
-  position: absolute;
+  background: #d9d9d9;
+  color: #333;
+  position: relative;
 }
